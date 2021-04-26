@@ -3,19 +3,23 @@ import React from 'react';
 
 interface DangoProps{
     id: number;
+}
+
+interface DangoState{
     name: string;
     color: string;
     activationPercent: number;
     effect: string;
 }
 
-export const Dango = (props: DangoProps):JSX.Element => {
+export const Dango = (props: DangoProps, state: DangoState):JSX.Element => {
     return(
         <div className='container-dango'>
-            {props.name}
-            {props.color}
-            {props.activationPercent}
-            {props.effect}
+            {props.id}
+            {state.name}
+            {state.color}
+            {state.activationPercent}
+            {state.effect}
         </div>
     )
 }
