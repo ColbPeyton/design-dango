@@ -8,6 +8,7 @@ interface SelectionState{
 }
 
 enum catagories{
+    all ='all',
     powerful = 'powerful', 
     determined = 'determined',
     unusual = 'unusual',
@@ -24,11 +25,18 @@ export const DangoSelection = ():JSX.Element => {
     // update catagory of dango to display
     const updateCatagory = (catagory:string):void => {
         setCurrentCatagory(catagory);
-        updateCurrentlyViewedDangos(catagory)
+        updateCurrentlyViewedDangos()
     }
 
-    const updateCurrentlyViewedDangos = (catagory:string):void => {
-        switch(catagory){
+    // add active class to selected catagory button
+    const activeCatagory = (catagoryName:string):string => {
+        return catagoryName === currentCatagory
+        ? 'active'
+        : '';
+    }
+
+    const updateCurrentlyViewedDangos = ():void => {
+        switch(currentCatagory){
             case catagories.powerful:
                 setCurrentDangos(powerful);
                 break;
@@ -66,27 +74,28 @@ export const DangoSelection = ():JSX.Element => {
     }
 
 
+
     return(
         <div className='container-dango-selection'>
             <div className='container-catagories'>
                 <button 
-                    className='catagories-btn' 
-                    onClick={()=> updateCatagory('')}
+                    className={`catagory-btn ${activeCatagory(catagories.all)}`} 
+                    onClick={()=> updateCatagory(catagories.all)}
                 >All</button>
                 <button 
-                    className='catagories-btn' 
+                    className={`catagory-btn ${activeCatagory(catagories.powerful)}`} 
                     onClick={()=> updateCatagory(catagories.powerful)}
                 >Powerful</button>
                 <button 
-                    className='catagories-btn' 
+                    className={`catagory-btn ${activeCatagory(catagories.determined)}`} 
                     onClick={()=> updateCatagory(catagories.determined)}
                 >Determined</button>
                 <button 
-                    className='catagories-btn' 
+                    className={`catagory-btn ${activeCatagory(catagories.unusual)}`} 
                     onClick={()=> updateCatagory(catagories.unusual)}
                 >Unusual</button>
                 <button 
-                    className='catagories-btn' 
+                    className={`catagory-btn ${activeCatagory(catagories.grandiose)}`} 
                     onClick={()=> updateCatagory(catagories.grandiose)}
                 >Grandiose</button>
             </div>
