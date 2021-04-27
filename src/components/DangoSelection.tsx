@@ -46,6 +46,25 @@ export const DangoSelection = ():JSX.Element => {
         }
     }
 
+    const renderCurrentDango = ():JSX.Element => {
+        return(
+            <div className='container-dango'>
+                {currentDangos.map((dango, index) => {
+                    return <Dango key={index} dango={
+                        {
+                            id: dango.id, 
+                            name: dango.name, 
+                            img: dango.img,
+                            activationPercent: dango.activationChance,
+                            effect: dango.effect,
+                            dailySpecial: dango.dailySpecial,
+                        }
+                    } />
+                })}
+            </div>
+        )
+    }
+
 
     return(
         <div className='container-dango-selection'>
@@ -71,6 +90,7 @@ export const DangoSelection = ():JSX.Element => {
                     onClick={()=> updateCatagory(catagories.grandiose)}
                 >Grandiose</button>
             </div>
+            {renderCurrentDango()}
         </div>
     )
 }
