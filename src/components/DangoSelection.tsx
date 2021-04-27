@@ -25,7 +25,7 @@ export const DangoSelection = ():JSX.Element => {
     // update catagory of dango to display
     const updateCatagory = (catagory:string):void => {
         setCurrentCatagory(catagory);
-        updateCurrentlyViewedDangos()
+        updateCurrentlyViewedDangos(catagory)
     }
 
     // add active class to selected catagory button
@@ -35,8 +35,8 @@ export const DangoSelection = ():JSX.Element => {
         : '';
     }
 
-    const updateCurrentlyViewedDangos = ():void => {
-        switch(currentCatagory){
+    const updateCurrentlyViewedDangos = (catagory: string):void => {
+        switch(catagory){
             case catagories.powerful:
                 setCurrentDangos(powerful);
                 break;
