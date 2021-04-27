@@ -1,4 +1,4 @@
-interface dangoInfo {
+export interface dangoInfo {
     id: number;
     name: string;
     skill: string;
@@ -328,9 +328,9 @@ export const grandiose: dangoInfo[] = [
 
 
 
-export const dangoData = {
+export const dangoData = [
     ...powerful, 
     ...determined, 
     ...unusual, 
     ...grandiose
- }
+]
