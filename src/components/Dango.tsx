@@ -1,5 +1,6 @@
-import React from 'react';
+import React,{useContext, useState} from 'react';
 import temp from '../assets/powerful/temp.jpg';
+import {CurrentDangoContext} from '../contexts/CurrentDango';
 
 interface DangoProps{
     dango: {
@@ -14,10 +15,35 @@ interface DangoProps{
 }
 
 
+interface DangoState{
+    isActive:boolean;
+}
+
 
 export const Dango = (props: DangoProps):JSX.Element => {
+    const context = useContext(CurrentDangoContext)
+    const [isActive, setIsActive] = useState<DangoState['isActive']>(context.isLocatedInDango(props.dango.id))
+
+    const updateStylingIfActive = ():string => {
+        return isActive
+        ? 'active'
+        : ''
+    }
+
+    const addOrRemoveFromContext = ():void => {
+        if(isActive){
+            context.removeDango(props.dango.id);
+            setIsActive(false)
+        }else{
+            context.addDango(props.dango.id);
+            setIsActive(true);
+        }
+    }
     return(
-        <div className='container-dango'>
+        <button 
+            className={`container-dango ${updateStylingIfActive()}`} 
+            onClick={()=> addOrRemoveFromContext()}
+        >
             <div className='dango-img'>
                 <img src={temp} alt={props.dango.name} />
             </div>
@@ -29,6 +55,6 @@ export const Dango = (props: DangoProps):JSX.Element => {
                     <p>{props.dango.skill}</p>
                 </div>
             </div>
-        </div>
+        </button>
     )
 }

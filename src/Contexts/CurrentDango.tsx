@@ -4,13 +4,15 @@ interface defaultContext{
     currentDango: number[];
     addDango: (id:number)=> void;
     removeDango: (id:number)=> void;
+    isLocatedInDango: (id:number)=> boolean;
 }
 
 
 const defaultValue:defaultContext = {
-    currentDango: [0, 0, 0],
+    currentDango: [],
     addDango: (id:number)=> {},
-    removeDango: (id:number)=> {}
+    removeDango: (id:number)=> {},
+    isLocatedInDango: (id:number) => false
  }
 
 export const CurrentDangoContext = createContext(defaultValue);
@@ -24,7 +26,7 @@ export const CurrentDangoProvider = (props:any):JSX.Element => {
     const [currentDango, setCurrentDango] = useState<CurrentDangoState['currentDango']>(defaultValue.currentDango)
 
     const addDango = (id:number):void => {
-        if(!currentDango.includes(id) && currentDango.length > 3){
+        if(!isLocatedInDango(id) && currentDango.length < 3){
             setCurrentDango([...currentDango, id])
         }
     }
@@ -34,10 +36,15 @@ export const CurrentDangoProvider = (props:any):JSX.Element => {
         setCurrentDango(temp);
     }
 
+    const isLocatedInDango =(id:number): boolean => {
+        return currentDango.includes(id);
+    }
+
     const contextValue = {
         currentDango, 
         addDango,
-        removeDango
+        removeDango,
+        isLocatedInDango
     }
 
     return(
