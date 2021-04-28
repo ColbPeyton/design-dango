@@ -1,10 +1,13 @@
 import React from 'react';
+import {CurrentDangoProvider} from '../contexts/CurrentDango';
 import {DangoSelection} from './DangoSelection';
 
 export const App = ():JSX.Element => {
   return (
     <div>
-      <DangoSelection />
+      <CurrentDangoProvider>
+        <DangoSelection />
+      </CurrentDangoProvider>
     </div>
   );
 }
