@@ -99,7 +99,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Medic (Lo)', 
         effect: 'Slightly increases health recovery from items.',
         activationChance: 85,
-        img: '',
+        img: '../assets/determined/medic.png',
         dailySpecial: false
     },
     {
@@ -126,7 +126,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Fire Res (Lo)', 
         effect: 'Slightly increases fire resistance.',
         activationChance: 90,
-        img: '',
+        img: '../assets/determined/piping.png',
         dailySpecial: false
     },
     {
@@ -153,7 +153,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Ice Res (Lo)', 
         effect: 'Slightly increases ice resistance.',
         activationChance: 90,
-        img: '',
+        img: '../assets/determined/too.png',
         dailySpecial: false
     },
     {
