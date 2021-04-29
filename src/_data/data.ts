@@ -1,3 +1,16 @@
+function importAll(r:any) {
+    return r.keys().map(r);
+  }
+  
+
+const powerfulImages = importAll(require.context('../assets/powerful', false, /\.(png|jpe?g|svg)$/));
+const determinedImages = importAll(require.context('../assets/determined', false, /\.(png|jpe?g|svg)$/));
+const unusualImages = importAll(require.context('../assets/unusual', false, /\.(png|jpe?g|svg)$/));
+const grandioseImages = importAll(require.context('../assets/grandiose', false, /\.(png|jpe?g|svg)$/));
+
+
+
+
 export interface dangoInfo {
     id: number;
     name: string;

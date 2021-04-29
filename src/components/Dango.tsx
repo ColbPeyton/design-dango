@@ -1,5 +1,4 @@
 import React,{useContext, useState} from 'react';
-import temp from '../assets/powerful/temp.jpg';
 import {CurrentDangoContext} from '../Contexts/CurrentDango';
 
 interface DangoProps{
@@ -45,7 +44,7 @@ export const Dango = (props: DangoProps):JSX.Element => {
             onClick={()=> addOrRemoveFromContext()}
         >
             <div className='dango-img'>
-                <img src={temp} alt={props.dango.name} />
+                <img src={props.dango.img} alt={props.dango.name} />
             </div>
             <div className='dango-info'>
                 <div className='name'>
