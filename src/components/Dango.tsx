@@ -6,7 +6,7 @@ interface DangoProps{
         id: number,
         name: string,
         skill: string,
-        img: string,
+        img: any,
         activationPercent: number,
         effect: string,
         dailySpecial: boolean,
@@ -38,13 +38,14 @@ export const Dango = (props: DangoProps):JSX.Element => {
             setIsActive(true);
         }
     }
+
     return(
         <button 
             className={`container-dango ${updateStylingIfActive()}`} 
             onClick={()=> addOrRemoveFromContext()}
         >
             <div className='dango-img'>
-                <img src={props.dango.img} alt={props.dango.name} />
+                <img src={props.dango.img.default} alt={props.dango.name} />
             </div>
             <div className='dango-info'>
                 <div className='name'>
