@@ -15,7 +15,7 @@ export const powerful: dangoInfo[] = [
         skill: 'Dango Hurler', 
         effect: 'Increases damage dealt by kunai.',
         activationChance: 80,
-        img: '',
+        img: '../assets/powerful/sweetheart.png',
         dailySpecial: false
     },
     {
@@ -24,7 +24,7 @@ export const powerful: dangoInfo[] = [
         skill: 'Dango Deflector', 
         effect: 'Helps your weapon retain sharpness when attacks are deflected.',
         activationChance: 90,
-        img: '',
+        img: '../assets/powerful/peach.png',
         dailySpecial: false
     },
     {
@@ -33,7 +33,7 @@ export const powerful: dangoInfo[] = [
         skill: 'Dango Bulker', 
         effect: 'Grants a temporary attack boost when you use the Show Off 2 gesture for a while.',
         activationChance: 80,
-        img: '',
+        img: '../assets/powerful/cool.png',
         dailySpecial: false
     },
     {
@@ -42,7 +42,7 @@ export const powerful: dangoInfo[] = [
         skill: 'Dango Booster', 
         effect: 'Temporarily increases attack and defense after consumption, once.',
         activationChance: 70,
-        img: '',
+        img: '../assets/powerful/mint.png',
         dailySpecial: false
     },
     {
@@ -51,7 +51,7 @@ export const powerful: dangoInfo[] = [
         skill: 'Dango Slugger', 
         effect: 'Makes it easier to stun monsters.',
         activationChance: 50,
-        img: '',
+        img: '../assets/powerful/dizzy.png',
         dailySpecial: false
     },
     {
@@ -60,7 +60,7 @@ export const powerful: dangoInfo[] = [
         skill: 'Dango Bombardier', 
         effect: 'Increases damage of Sticky Ammo and gunlance shells.',
         activationChance: 50,
-        img: '',
+        img: '../assets/powerful/fruit.png',
         dailySpecial: false
     },
     {
@@ -69,7 +69,7 @@ export const powerful: dangoInfo[] = [
         skill: 'Dango Temper', 
         effect: 'Increases ammo damage, but also increases',
         activationChance: 50,
-        img: '',
+        img: '../assets/powerful/beans.png',
         dailySpecial: false
     },
 ];
@@ -81,7 +81,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Insurance', 
         effect: 'Prevents your group from being penalized the first time a member faints.',
         activationChance: 85,
-        img: '',
+        img: '../assets/determined/berry.png',
         dailySpecial: true
     },
     {
@@ -90,7 +90,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Defender (Lo)', 
         effect: 'Sometimes decreases damage taken.',
         activationChance: 85,
-        img: '',
+        img: '../assets/determined/best.png',
         dailySpecial: false
     },
     {
@@ -108,7 +108,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Reviver', 
         effect: 'Restores health to allies in the area upon fainting, once.',
         activationChance: 90,
-        img: '',
+        img: '../assets/determined/moon.png',
         dailySpecial: false
     },
     {
@@ -117,7 +117,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Immunizer', 
         effect: 'Haves the effect duration of Defense Down and speeds up blight recovery.',
         activationChance: 85,
-        img: '',
+        img: '../assets/determined/caca.png',
         dailySpecial: false
     },
     {
@@ -135,7 +135,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Water Res (Lo)', 
         effect: 'Slightly increases water resistance.',
         activationChance: 90,
-        img: '',
+        img: '../assets/determined/pure.png',
         dailySpecial: false
     },
     {
@@ -144,7 +144,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Thunder Res (Lo)', 
         effect: 'Slightly increases thunder resistance.',
         activationChance: 90,
-        img: '',
+        img: '../assets/determined/spice.png',
         dailySpecial: false
     },
     {
@@ -162,7 +162,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Dragon Res (Lo)', 
         effect: 'Slightly increases dragon resistance.',
         activationChance: 80,
-        img: '',
+        img: '../assets/determined/dragon.png',
         dailySpecial: false
     },
     {
@@ -171,7 +171,7 @@ export const determined: dangoInfo[] = [
         skill: 'Dango Moxie', 
         effect: 'Prevents fainting one time when damage taken exceeds your remaining health.',
         activationChance: 60,
-        img: '',
+        img: '../assets/determined/magna.png',
         dailySpecial: false
     },
 ];
@@ -183,7 +183,7 @@ export const unusual: dangoInfo[] = [
         skill: 'Dango Polisher', 
         effect: 'Speeds up weapon sharpening.',
         activationChance: 70,
-        img: '',
+        img: '../assets/unusual/sharp.png',
         dailySpecial: false
     },
     {
@@ -192,7 +192,7 @@ export const unusual: dangoInfo[] = [
         skill: 'Dango Feet', 
         effect: 'Prevents you from getting knocked on your butt.',
         activationChance: 55,
-        img: '',
+        img: '../assets/unusual/balancing.png',
         dailySpecial: false
     },
     {
@@ -201,7 +201,7 @@ export const unusual: dangoInfo[] = [
         skill: 'Dango Wall Runner', 
         effect: 'Decreases stamina depletion while wall running.',
         activationChance: 80,
-        img: '',
+        img: '../assets/unusual/leg.png',
         dailySpecial: false
     },
     {
@@ -210,7 +210,7 @@ export const unusual: dangoInfo[] = [
         skill: 'Dango Fighter', 
         effect: 'Reduces stamina depletion when evading, blocking, or doing certain other actions.',
         activationChance: 50,
-        img: '',
+        img: '../assets/unusual/invigorating.png',
         dailySpecial: false
     },
     {
@@ -219,7 +219,7 @@ export const unusual: dangoInfo[] = [
         skill: 'Dango Fighter', 
         effect: 'Reduces stamina depletion when evading, blocking, or doing certain other actions.',
         activationChance: 80,
-        img: '',
+        img: '../assets/unusual/pinea.png',
         dailySpecial: false
     },
     {
@@ -228,7 +228,7 @@ export const unusual: dangoInfo[] = [
         skill: 'Dango Weakener', 
         effect: 'Large monsters encountered on quests have an increased chance of being weaker than normal.',
         activationChance: 90,
-        img: '',
+        img: '../assets/unusual/spud.png',
         dailySpecial: false
     },
     {
@@ -237,7 +237,7 @@ export const unusual: dangoInfo[] = [
         skill: 'Dango Rider', 
         effect: 'Extends riding time.',
         activationChance: 80,
-        img: '',
+        img: '../assets/unusual/dress.png',
         dailySpecial: false
     }
 ];
@@ -249,7 +249,7 @@ export const grandiose: dangoInfo[] = [
         skill: 'Dango Calculator', 
         effect: 'Increases the number of Kamura Points you receive at the end of a quest.',
         activationChance: 90,
-        img: '',
+        img: '../assets/grandiose/kamura.png',
         dailySpecial: true
     },
     {
@@ -258,7 +258,7 @@ export const grandiose: dangoInfo[] = [
         skill: 'Dango Harvester', 
         effect: 'Reduces the time between gathering point respawns.',
         activationChance: 90,
-        img: '',
+        img: '../assets/grandiose/raisin.png',
         dailySpecial: true
     },
     {
@@ -267,7 +267,7 @@ export const grandiose: dangoInfo[] = [
         skill: 'Dango Fortune Caller', 
         effect: 'Sometimes increases the number of reward items received at the end of a quest.',
         activationChance: 70,
-        img: '',
+        img: '../assets/grandiose/hap.png',
         dailySpecial: true
     },
     {
@@ -276,7 +276,7 @@ export const grandiose: dangoInfo[] = [
         skill: 'Dango Carver (Lo)', 
         effect: 'Sometimes increases the number of times you can carve.',
         activationChance: 80,
-        img: '',
+        img: '../assets/grandiose/rosy.png',
         dailySpecial: true
     },
     {
@@ -285,7 +285,7 @@ export const grandiose: dangoInfo[] = [
         skill: 'Dango Money Maker', 
         effect: 'Increases the amount of zenny you receive at the end of a quest.',
         activationChance: 90,
-        img: '',
+        img: '../assets/grandiose/wealthy.png',
         dailySpecial: true
     },
     {
@@ -294,7 +294,7 @@ export const grandiose: dangoInfo[] = [
         skill: 'Dango Gatherer', 
         effect: 'Increases the quantity of honey obtained when gathering.',
         activationChance: 75,
-        img: '',
+        img: '../assets/grandiose/bee.png',
         dailySpecial: false
     },
     {
@@ -303,7 +303,7 @@ export const grandiose: dangoInfo[] = [
         skill: 'Dango Bird Caller', 
         effect: 'Makes Spiribirds more likely to approach you.',
         activationChance: 80,
-        img: '',
+        img: '../assets/grandiose/chirp.png',
         dailySpecial: false
     },
     {
@@ -312,7 +312,7 @@ export const grandiose: dangoInfo[] = [
         skill: 'Dango Summoner', 
         effect: 'Makes rare Crafty Creatures more likely to appear.',
         activationChance: 90,
-        img: '',
+        img: '../assets/grandiose/call.png',
         dailySpecial: false
     },
     {
@@ -321,7 +321,7 @@ export const grandiose: dangoInfo[] = [
         skill: 'Dango Trainer', 
         effect: 'Speeds up Buddy Growth.',
         activationChance: 80,
-        img: '',
+        img: '../assets/grandiose/buddy.png',
         dailySpecial: false
     },
 ]
