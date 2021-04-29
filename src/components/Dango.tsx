@@ -1,6 +1,6 @@
 import React,{useContext, useState} from 'react';
 import temp from '../assets/powerful/temp.jpg';
-import {CurrentDangoContext} from '../contexts/CurrentDango';
+import {CurrentDangoContext} from '../Contexts/CurrentDango';
 
 interface DangoProps{
     dango: {
