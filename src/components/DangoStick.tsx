@@ -1,31 +1,24 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {CurrentDangoContext, defaultDango} from '../Contexts/CurrentDango';
-import {Dango} from './Dango';
 
-interface DangoStickState{
-    currentStick: defaultDango[];
+interface DangoStickProps{
+    currentDango: defaultDango[];
+    addDango: (id:defaultDango)=> void;
+    removeDango: (id:number)=> void;
+    isLocatedInDango: (id:number)=> boolean;
 }
 
 
 export const DangoStick = ():JSX.Element => {
-    const context = useContext(CurrentDangoContext)
+    const context = useContext<DangoStickProps>(CurrentDangoContext);
 
     const renderDango = ():JSX.Element => {
         return(
             <div className='container-dango-stick'>
                 {context.currentDango.map((el, index) => {
-                    return <Dango key={index} 
-                        dango={
-                            {
-                                id: el.id, 
-                                name: el.name, 
-                                img: el.img,
-                                skill: el.skill,
-                                activationChance: el.activationChance,
-                                effect: el.effect,
-                                dailySpecial: el.dailySpecial,
-                            }
-                        } />
+                    return <div key={index}>
+                            <img src={el.img.default} alt={el.name}/>
+                        </div>
                     }
                 )}
             </div>
