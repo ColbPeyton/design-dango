@@ -64,7 +64,7 @@ export const DangoSelection = ():JSX.Element => {
                             name: dango.name, 
                             img: dango.img,
                             skill: dango.skill,
-                            activationPercent: dango.activationChance,
+                            activationChance: dango.activationChance,
                             effect: dango.effect,
                             dailySpecial: dango.dailySpecial,
                         }

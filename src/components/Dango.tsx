@@ -7,7 +7,7 @@ interface DangoProps{
         name: string,
         skill: string,
         img: any,
-        activationPercent: number,
+        activationChance: number,
         effect: string,
         dailySpecial: boolean,
     }
@@ -34,7 +34,7 @@ export const Dango = (props: DangoProps):JSX.Element => {
             context.removeDango(props.dango.id);
             setIsActive(false)
         }else{
-            context.addDango(props.dango.id);
+            context.addDango(props.dango);
             setIsActive(true);
         }
     }
