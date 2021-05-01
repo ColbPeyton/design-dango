@@ -1,5 +1,6 @@
 import React,{useContext, useState} from 'react';
 import {CurrentDangoContext} from '../Contexts/CurrentDango';
+import '../styles/Dango.scss';
 
 interface DangoProps{
     dango: {
