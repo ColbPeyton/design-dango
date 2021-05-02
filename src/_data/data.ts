@@ -1,12 +1,10 @@
-function importAll(r:any) {
-    return r.keys().map(r);
-  }
-  
+import {importAll} from '../_helpers/importImages';
 
 const powerfulImages = importAll(require.context('../assets/powerful', false, /\.(png|jpe?g|svg)$/));
 const determinedImages = importAll(require.context('../assets/determined', false, /\.(png|jpe?g|svg)$/));
 const unusualImages = importAll(require.context('../assets/unusual', false, /\.(png|jpe?g|svg)$/));
 const grandioseImages = importAll(require.context('../assets/grandiose', false, /\.(png|jpe?g|svg)$/));
+const stickImages = importAll(require.context('../assets/stick', false, /\.(png|jpe?g|svg)$/));
 
 
 
@@ -346,4 +344,10 @@ export const dangoData = [
     ...determined, 
     ...unusual, 
     ...grandiose
+]
+
+
+
+export const stick = [
+    ...stickImages
 ]
