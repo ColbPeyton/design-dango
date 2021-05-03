@@ -8,8 +8,14 @@ export const App = ():JSX.Element => {
   return (
     <div className='container-app'>
       <CurrentDangoProvider>
-        <DangoStick />
-        <DangoSelection />
+        <div className='container-dango-selection-stick'>
+          <div className='container-dango-stick'>
+            <DangoStick />
+          </div>
+          <div className='container-dango-selection'>
+            <DangoSelection />
+          </div>
+        </div>
       </CurrentDangoProvider>
     </div>
   );
