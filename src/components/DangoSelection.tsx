@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import {dangoInfo, dangoData ,powerful, determined, unusual, grandiose} from '../_data/data';
 import {Dango} from './Dango';
-import '../styles/DangoSelection.scss'
+import {randomKey} from '../_helpers/randomKey';
+import '../styles/DangoSelection.scss';
 
 interface SelectionState{
     currentDangos: dangoInfo[];
@@ -58,8 +59,8 @@ export const DangoSelection = ():JSX.Element => {
     const renderCurrentDango = ():JSX.Element => {
         return(
             <div className='container-dangos'>
-                {currentDangos.map((dango, index) => {
-                    return <Dango key={index} dango={
+                {currentDangos.map((dango) => {
+                    return <Dango key={randomKey()} dango={
                         {
                             id: dango.id, 
                             name: dango.name, 

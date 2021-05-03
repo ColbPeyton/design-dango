@@ -25,7 +25,7 @@ export const Dango = (props: DangoProps):JSX.Element => {
     const [isActive, setIsActive] = useState<DangoState['isActive']>(context.isLocatedInDango(props.dango.id))
 
     const updateStylingIfActive = ():string => {
-        return isActive
+        return isActive && context.isLocatedInDango(props.dango.id)
         ? 'active'
         : ''
     }
