@@ -11,6 +11,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        img{
+            max-width: 150px;
+            max-height: 150px;
+        }
     }
 
     .dango{
@@ -20,6 +25,39 @@
         z-index: 10;
     }
 
+}
 
-    
+
+@media screen and (min-width: 481px){
+    .container-dango-stick{
+        .stick{
+            img{
+                max-width: 175px;
+                max-height: 175px;
+            }
+        } 
+    }
+}
+@media screen and (min-width: 769px){
+    .container-dango-stick{
+        .stick{
+            img{
+                max-width: 250px;
+                max-height: 250px;
+            }
+        } 
+    }
+}
+@media screen and (min-width: 1025px){
+   
+}
+@media screen and (min-width: 1201px){
+    .container-dango-stick{
+        .stick{
+            img{
+                max-width: 275px;
+                max-height: 275px;
+            }
+        } 
+    }
 }

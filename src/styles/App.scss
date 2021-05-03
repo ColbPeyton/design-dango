@@ -10,6 +10,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        
+        .container-dango-stick{
+            order: 2;
+        }
+        .container-dango-selection{
+            order: 1;
+        }
+
     }
 }
 
@@ -26,6 +34,10 @@
 
             .container-dango-stick{
                 width: 40%;
+                order: 1;
+            }
+            .container-dango-selection{
+                order: 2;
             }
         }
     }
