@@ -1,0 +1,25 @@
+.container-dango-stick{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .stick{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dango{
+        width: auto;
+        height: auto;
+        position: absolute;
+        z-index: 10;
+    }
+
+
+    
+}
