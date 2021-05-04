@@ -1,6 +1,7 @@
 import React from 'react';
 import {CurrentDangoProvider} from '../Contexts/CurrentDango';
 import {DangoSelection} from './DangoSelection';
+import {Header} from './Header';
 import {DangoStick} from './DangoStick';
 import '../styles/App.scss';
 
@@ -8,6 +9,7 @@ export const App = ():JSX.Element => {
   return (
     <div className='container-app'>
       <CurrentDangoProvider>
+        <Header />
         <div className='container-dango-selection-stick'>
           <div className='container-dango-stick'>
             <DangoStick />
