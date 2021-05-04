@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Footer.scss';
 const link = 'https://colbypeyton.com/'
 
 export const Footer = ():JSX.Element => {
