@@ -2,6 +2,7 @@ import React from 'react';
 import {CurrentDangoProvider} from '../Contexts/CurrentDango';
 import {DangoSelection} from './DangoSelection';
 import {Header} from './Header';
+import {Footer} from './Footer';
 import {DangoStick} from './DangoStick';
 import '../styles/App.scss';
 
@@ -19,6 +20,7 @@ export const App = ():JSX.Element => {
           </div>
         </div>
       </CurrentDangoProvider>
+      <Footer />
     </div>
   );
 }
