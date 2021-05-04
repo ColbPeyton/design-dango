@@ -8,6 +8,7 @@ interface DangoStickProps{
     addDango: (id:defaultDango)=> void;
     removeDango: (id:number)=> void;
     isLocatedInDango: (id:number)=> boolean;
+    resetDango: () => void;
 }
 
 

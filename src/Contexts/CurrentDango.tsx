@@ -15,6 +15,7 @@ interface defaultContext{
     addDango: (id:defaultDango)=> void;
     removeDango: (id:number)=> void;
     isLocatedInDango: (id:number)=> boolean;
+    resetDango: () => void;
 }
 
 
@@ -22,7 +23,8 @@ const defaultValue:defaultContext = {
     currentDango: [],
     addDango: (id:defaultDango)=> {},
     removeDango: (id:number)=> {},
-    isLocatedInDango: (id:number) => false
+    isLocatedInDango: (id:number) => false,
+    resetDango: () => {}
  }
 
 export const CurrentDangoContext = createContext(defaultValue);
@@ -50,11 +52,16 @@ export const CurrentDangoProvider = (props:any):JSX.Element => {
         return currentDango.some(curr => curr.id === id);
     }
 
+    const resetDango = ():void => {
+        setCurrentDango([]);
+    }
+
     const contextValue = {
         currentDango, 
         addDango,
         removeDango,
-        isLocatedInDango
+        isLocatedInDango,
+        resetDango
     }
 
     return(
