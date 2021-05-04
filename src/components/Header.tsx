@@ -1,10 +1,11 @@
 import React from 'react';
+import '../styles/Header.scss';
 
 export const Header  = ():JSX.Element => {
     return(
         <div className='container-header'>
-            <div className='contatiner-reset-btn'>
-                <button id='reset-btn'>
+            <div className='contatiner-top-btn'>
+                <button className='btn'>
                     reset
                 </button>
             </div>
@@ -12,7 +13,7 @@ export const Header  = ():JSX.Element => {
                 <h2>Dango Designer</h2>
             </div>
             <div className='contatiner-top-btn'>
-                <button id='top-btn'>
+                <button className='btn'>
                     top
                 </button>
             </div>
