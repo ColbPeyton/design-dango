@@ -12,10 +12,12 @@
         flex-direction: column;
         
         .container-dango-stick{
-            order: 2;
+            order: 1;
+            margin: 0.25rem 0;
         }
         .container-dango-selection{
-            order: 1;
+            order: 2;
+            
         }
 
     }

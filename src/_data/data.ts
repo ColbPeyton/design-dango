@@ -124,7 +124,7 @@ export const determined: dangoInfo[] = [
     },
     {
         id: 205, 
-        name: 'Cacaoutstanding',
+        name: 'Caca-outstanding',
         skill: 'Dango Immunizer', 
         effect: 'Haves the effect duration of Defense Down and speeds up blight recovery.',
         activationChance: 85,
