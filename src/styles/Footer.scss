@@ -1,18 +1,29 @@
+@import './colors';
+
 .container-footer{
     width: 100%;
-    height: 15vh;
+    height: 12vh;
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: $background-dark;
+    color: #fff;
     .top{
         width: 100%;
         height: 70%;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        text-align: center;
         p{
-            font-size: 1.25rem;
+            font-size: 0.75rem;
+            &:first-child{
+                margin-bottom: 5px;
+                font-size: 1.25rem;
+            }
         }
     }
     .bot{
@@ -24,6 +35,10 @@
         a{
             font-style: italic;
             text-decoration: none;
+            cursor: pointer;
+            &:visited{
+                color: $orange;
+            }
         }
     }
 }

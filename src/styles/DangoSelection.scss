@@ -2,7 +2,7 @@
 .container-dango-selection{
     background-color: $background-dark;
     width: 100%;
-    height: 375px;
+    height: 390px;
     overflow-x:hidden;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -52,7 +52,7 @@
             }
         }
         .catagory-btn{
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             background-color: $yellow;
             &.active{
                 background-color: $orange;
