@@ -1,7 +1,11 @@
+@import './colors';
+
 .container-app{
     width: 100%;
     height: 100%;
     max-width: 2000px;
+    background-color: $background-light;
+    
 
     .container-dango-selection-stick{
         width: 100%;

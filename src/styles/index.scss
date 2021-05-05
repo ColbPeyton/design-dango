@@ -1,11 +1,13 @@
-
+@import './colors';
 @import './font';
 body {
+  background-color: $background-dark;
+}
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
 }
 
 h1, h2, h3, h4{
@@ -15,6 +17,14 @@ h1, h2, h3, h4{
 p, button{
   font-family: $text;
 }
+
+
+button{
+  border: none;
+  cursor: pointer;
+  &:focus {outline:0;}
+}
+
 
 @media screen and (min-width: 2000px){
   body{
