@@ -81,26 +81,31 @@ export const DangoSelection = ():JSX.Element => {
     return(
         <div className='container-dango-selection'>
             <div className='container-catagories'>
-                <button 
-                    className={`catagory-btn ${activeCatagory(catagories.all)}`} 
-                    onClick={()=> updateCatagory(catagories.all)}
-                >All</button>
-                <button 
-                    className={`catagory-btn ${activeCatagory(catagories.powerful)}`} 
-                    onClick={()=> updateCatagory(catagories.powerful)}
-                >Powerful</button>
-                <button 
-                    className={`catagory-btn ${activeCatagory(catagories.determined)}`} 
-                    onClick={()=> updateCatagory(catagories.determined)}
-                >Determined</button>
-                <button 
-                    className={`catagory-btn ${activeCatagory(catagories.unusual)}`} 
-                    onClick={()=> updateCatagory(catagories.unusual)}
-                >Unusual</button>
-                <button 
-                    className={`catagory-btn ${activeCatagory(catagories.grandiose)}`} 
-                    onClick={()=> updateCatagory(catagories.grandiose)}
-                >Grandiose</button>
+                <div className='top'>
+                    <button 
+                        className={`catagory-btn ${activeCatagory(catagories.all)}`} 
+                        onClick={()=> updateCatagory(catagories.all)}
+                    >All</button>
+                </div>
+                <div className='bot'>
+                    <button 
+                        className={`catagory-btn first ${activeCatagory(catagories.powerful)}`} 
+                        onClick={()=> updateCatagory(catagories.powerful)}
+                    >Powerful</button>
+                    <button 
+                        className={`catagory-btn ${activeCatagory(catagories.determined)}`} 
+                        onClick={()=> updateCatagory(catagories.determined)}
+                    >Determined</button>
+                    <button 
+                        className={`catagory-btn ${activeCatagory(catagories.unusual)}`} 
+                        onClick={()=> updateCatagory(catagories.unusual)}
+                    >Unusual</button>
+                    <button 
+                        className={`catagory-btn last ${activeCatagory(catagories.grandiose)}`} 
+                        onClick={()=> updateCatagory(catagories.grandiose)}
+                    >Grandiose</button>
+                </div>
+
             </div>
             {renderCurrentDango()}
         </div>
