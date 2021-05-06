@@ -23,6 +23,13 @@ export const DangoStick = ():JSX.Element => {
         return <div></div>
     }
 
+    const renderDangoEffect = (currentDango: defaultDango[], index: number):JSX.Element => {
+        if(currentDango[index]){
+            return <DangoEffect name={context.currentDango[index].skill} chance={context.currentDango[index].activationChance} />
+        }
+        return <DangoEffect />
+    }
+
     const renderDango = ():JSX.Element => {
         return(
             <div className='container-dango-stick'>
@@ -31,21 +38,26 @@ export const DangoStick = ():JSX.Element => {
                         <img src={stick[0].default} alt='dango stick' />
                         {shouldRenderDango(context.currentDango, 0)}
                     </div>
-                    <DangoEffect name={context.currentDango[0].skill} chance={context.currentDango[0].activationChance} />
+                    <div className='effect'>
+                        {renderDangoEffect(context.currentDango, 0)}
+                    </div>
                 </div>
                 <div className='container-stick-section'>
                     <div className='stick'>
                         <img src={stick[1].default} alt='dango stick' />
                         {shouldRenderDango(context.currentDango, 1)}
                     </div>
-                    <DangoEffect name={context.currentDango[1].skill} chance={context.currentDango[1].activationChance} />
-                </div>
+                    <div className='effect'>
+                        {renderDangoEffect(context.currentDango, 1)}
+                    </div>                </div>
                 <div className='container-stick-section'>
                     <div className='stick'>
                         <img src={stick[2].default} alt='dango stick' />
                         {shouldRenderDango(context.currentDango, 2)}
                     </div>
-                    <DangoEffect name={context.currentDango[2].skill} chance={context.currentDango[2].activationChance} />
+                    <div className='effect'>
+                        {renderDangoEffect(context.currentDango, 2)}
+                    </div>                
                 </div>
                 <div className='container-stick-section'>
                     <div className='stick'>
