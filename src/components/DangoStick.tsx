@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {CurrentDangoContext, defaultDango} from '../Contexts/CurrentDango';
+import { DangoEffect } from './DangoEffect';
 import {stick} from '../_data/data';
 import '../styles/DangoStick.scss';
 
@@ -25,22 +26,32 @@ export const DangoStick = ():JSX.Element => {
     const renderDango = ():JSX.Element => {
         return(
             <div className='container-dango-stick'>
-                <div className='stick'>
-                    <img src={stick[0].default} alt='dango stick' />
-                    {shouldRenderDango(context.currentDango, 0)}
+                <div className='container-stick-section'>
+                    <div className='stick'>
+                        <img src={stick[0].default} alt='dango stick' />
+                        {shouldRenderDango(context.currentDango, 0)}
+                    </div>
+                    <DangoEffect name={context.currentDango[0].skill} chance={context.currentDango[0].activationChance} />
                 </div>
-                <div className='stick'>
-                    <img src={stick[1].default} alt='dango stick' />
-                    {shouldRenderDango(context.currentDango, 1)}
+                <div className='container-stick-section'>
+                    <div className='stick'>
+                        <img src={stick[1].default} alt='dango stick' />
+                        {shouldRenderDango(context.currentDango, 1)}
+                    </div>
+                    <DangoEffect name={context.currentDango[1].skill} chance={context.currentDango[1].activationChance} />
                 </div>
-                <div className='stick'>
-                    <img src={stick[2].default} alt='dango stick' />
-                    {shouldRenderDango(context.currentDango, 2)}
+                <div className='container-stick-section'>
+                    <div className='stick'>
+                        <img src={stick[2].default} alt='dango stick' />
+                        {shouldRenderDango(context.currentDango, 2)}
+                    </div>
+                    <DangoEffect name={context.currentDango[2].skill} chance={context.currentDango[2].activationChance} />
                 </div>
-                <div className='stick'>
-                    <img src={stick[3].default} alt='dango stick' />
+                <div className='container-stick-section'>
+                    <div className='stick'>
+                        <img src={stick[3].default} alt='dango stick' />
+                    </div>
                 </div>
-                
             </div>
         )
     }
