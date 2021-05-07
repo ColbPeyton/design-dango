@@ -1,0 +1,28 @@
+@import './colors';
+
+.container-make{
+    width: 100%;
+    min-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    button{
+        width: 100%;
+        height: 100%;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: gray;
+        color: #fff;
+        font-size: 1.25rem;
+        cursor: not-allowed;
+
+        &.active{
+            background-color: $background-navy;
+            cursor: pointer;
+        }
+        
+    }
+
+
+}

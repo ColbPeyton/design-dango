@@ -69,12 +69,14 @@ export const CurrentDangoProvider = (props:any):JSX.Element => {
     }
 
     const activateEffects = ():void => {
-        if(currentDango.length === 3){
+        if(currentDango.length === 3 && activeEffect.length === 0){
+            const temp:string[] = [];
             for(const activate of currentDango){
                 if(chance(activate.activationChance)){
-                    setActiveEffect([...activeEffect, activate.skill])
+                   temp.push(activate.skill)
                 }
             }
+            setActiveEffect(temp);
         }
     }
 

@@ -1,6 +1,6 @@
 import React,{useContext} from 'react';
 import {CurrentDangoContext, defaultContext} from '../Contexts/CurrentDango';
-
+import '../styles/MakeDango.scss';
 
 export const MakeDango = ():JSX.Element => {
     const context = useContext<defaultContext>(CurrentDangoContext);
@@ -18,8 +18,12 @@ export const MakeDango = ():JSX.Element => {
     }
 
     return(
-        <div className={`container-make ${activateButton()}`}>
-           <button onClick={() => shouldActivate()}>Make Dango</button>
+        <div className='container-make'>
+           <button 
+                className={`container-make ${activateButton()}`} 
+                onClick={() => shouldActivate()}
+            >
+                Make Dango</button>
         </div>
     )
 }
