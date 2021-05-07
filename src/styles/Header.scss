@@ -5,11 +5,13 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: $background-overlay;
+    background-color: $background-navy;
     position: sticky;
     z-index: 20;
     top: 0;
     left: 0;
+    color: #fff;
+
     .contatiner-top-btn{
         width: 15%;
         height: 100%;
@@ -26,9 +28,14 @@
         align-items: center;
     }
     .btn{
+        color: #fff;
         border: none;
         border-radius: 10px;
         width: 100%;
         height: 75%;
+        background: none;
+        i{
+            font-size: 2rem;
+        }
     }
 }

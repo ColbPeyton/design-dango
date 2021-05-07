@@ -4,7 +4,8 @@
     width: 100%;
     height: 100%;
     max-width: 2000px;
-    background-color: $background-dango-selection;    
+    background-color: $background-dango-selection;
+    
 
     .container-dango-selection-stick{
         width: 100%;
@@ -16,7 +17,6 @@
         
         .container-dango-stick{
             order: 1;
-            margin: 0.15rem 0;
         }
         .container-dango-selection{
             order: 2;
