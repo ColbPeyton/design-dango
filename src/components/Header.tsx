@@ -19,7 +19,7 @@ export const Header  = ():JSX.Element => {
         <div className='container-header'>
             <div className='contatiner-top-btn'>
                 <button className='btn' onClick={()=> context.resetDango()}>
-                    reset
+                    <i className="fas fa-redo"></i>
                 </button>
             </div>
             <div className='container-logo'>
@@ -27,7 +27,7 @@ export const Header  = ():JSX.Element => {
             </div>
             <div className='contatiner-top-btn'>
                 <button className='btn'>
-                    top
+                    <i className="fas fa-arrow-up"></i>
                 </button>
             </div>
         </div>
