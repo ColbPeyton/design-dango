@@ -8,6 +8,9 @@ interface DangoStickProps{
     removeDango: (id:number)=> void;
     isLocatedInDango: (id:number)=> boolean;
     resetDango: () => void;
+    resetActiveEffect: () => void;
+    activateEffects: () => void;
+    activeEffect: string[];
 }
 
 
@@ -15,10 +18,15 @@ export const Header  = ():JSX.Element => {
 
     const context = useContext<DangoStickProps>(CurrentDangoContext);
 
+    const resetDango = ():void => {
+        context.resetDango();
+        context.resetActiveEffect();
+    }
+
     return(
         <div className='container-header'>
             <div className='contatiner-top-btn'>
-                <button className='btn' onClick={()=> context.resetDango()}>
+                <button className='btn' onClick={()=> resetDango()}>
                     <i className="fas fa-redo"></i>
                 </button>
             </div>

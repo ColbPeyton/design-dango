@@ -10,6 +10,9 @@ interface DangoStickProps{
     removeDango: (id:number)=> void;
     isLocatedInDango: (id:number)=> boolean;
     resetDango: () => void;
+    resetActiveEffect: () => void;
+    activateEffects: () => void;
+    activeEffect: string[];
 }
 
 
