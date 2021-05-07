@@ -11,7 +11,7 @@ export interface defaultDango {
     dailySpecial: boolean,
 }
 
-interface defaultContext{
+export interface defaultContext{
     currentDango: defaultDango[];
     addDango: (id:defaultDango)=> void;
     removeDango: (id:number)=> void;

@@ -1,23 +1,12 @@
 import React, {useContext} from 'react';
-import {CurrentDangoContext, defaultDango} from '../Contexts/CurrentDango';
+import {CurrentDangoContext, defaultDango, defaultContext} from '../Contexts/CurrentDango';
 import { DangoEffect } from './DangoEffect';
 import {stick} from '../_data/data';
 import '../styles/DangoStick.scss';
 
-interface DangoStickProps{
-    currentDango: defaultDango[];
-    addDango: (id:defaultDango)=> void;
-    removeDango: (id:number)=> void;
-    isLocatedInDango: (id:number)=> boolean;
-    resetDango: () => void;
-    resetActiveEffect: () => void;
-    activateEffects: () => void;
-    activeEffect: string[];
-}
-
 
 export const DangoStick = ():JSX.Element => {
-    const context = useContext<DangoStickProps>(CurrentDangoContext);
+    const context = useContext<defaultContext>(CurrentDangoContext);
 
     const shouldRenderDango = (currentDango:defaultDango[], index: number):JSX.Element => {
         if(currentDango[index]){

@@ -1,19 +1,25 @@
 import React,{useContext} from 'react';
-import {CurrentDangoContext, defaultDango} from '../Contexts/CurrentDango';
+import {CurrentDangoContext, defaultContext} from '../Contexts/CurrentDango';
 
-interface DangoStickProps{
-    currentDango: defaultDango[];
-    addDango: (id:defaultDango)=> void;
-    removeDango: (id:number)=> void;
-    isLocatedInDango: (id:number)=> boolean;
-    resetDango: () => void;
-}
- 
 
 export const MakeDango = ():JSX.Element => {
+    const context = useContext<defaultContext>(CurrentDangoContext);
+
+    const shouldActivate = ():void => {
+        if(context.currentDango.length === 3){
+            context.activateEffects();
+        }
+    }
+
+    const activateButton = ():string => {
+        return context.currentDango.length === 3
+        ? 'active'
+        : ''
+    }
+
     return(
-        <div className='container-make-dango'>
-           
+        <div className={`container-make ${activateButton()}`}>
+           <button onClick={() => shouldActivate()}>Make Dango</button>
         </div>
     )
 }

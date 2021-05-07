@@ -1,22 +1,10 @@
 import React,{useContext} from 'react';
-import {CurrentDangoContext, defaultDango} from '../Contexts/CurrentDango';
+import {CurrentDangoContext, defaultDango, defaultContext} from '../Contexts/CurrentDango';
 import '../styles/Header.scss';
-
-interface DangoStickProps{
-    currentDango: defaultDango[];
-    addDango: (id:defaultDango)=> void;
-    removeDango: (id:number)=> void;
-    isLocatedInDango: (id:number)=> boolean;
-    resetDango: () => void;
-    resetActiveEffect: () => void;
-    activateEffects: () => void;
-    activeEffect: string[];
-}
-
 
 export const Header  = ():JSX.Element => {
 
-    const context = useContext<DangoStickProps>(CurrentDangoContext);
+    const context = useContext<defaultContext>(CurrentDangoContext);
 
     const resetDango = ():void => {
         context.resetDango();
