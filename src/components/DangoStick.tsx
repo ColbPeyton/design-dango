@@ -63,6 +63,9 @@ export const DangoStick = ():JSX.Element => {
                     <div className='stick'>
                         <img src={stick[3].default} alt='dango stick' />
                     </div>
+                    <div className='effect'>
+                        <div></div>
+                    </div>    
                 </div>
             </div>
         )
