@@ -1,6 +1,6 @@
 import React,{useContext} from 'react';
 import {defaultContext, CurrentDangoContext} from '../Contexts/CurrentDango';
-
+import {randomKey} from '../_helpers/randomKey';
 
 export const EffectAlert = ():JSX.Element => {
     const context = useContext<defaultContext>(CurrentDangoContext);
@@ -9,10 +9,10 @@ export const EffectAlert = ():JSX.Element => {
         if(context.dangoHasBeenMade){
             if(context.activeEffect.length >= 1){
                 return <div className='list'>
-                    {context.activeEffect.map((effect:string, index:number):JSX.Element => {
+                    {context.activeEffect.map((effect:string):JSX.Element => {
                         return(
                             <div className='container-effect'>
-                                <h3 key={index}>{effect}</h3>
+                                <h3 key={randomKey()}>{effect}</h3>
                             </div>
                             )
                         })
@@ -32,7 +32,10 @@ export const EffectAlert = ():JSX.Element => {
     const effectDisplay = ():JSX.Element => {
         return(
             <div className='container-effect-alert'>
-
+                {renderList()}
+                <button className='btn' onClick={()=> context.resetDangoContext()}>
+                    Try Again? 
+                </button>
             </div>
         )
     }
