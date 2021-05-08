@@ -12,8 +12,8 @@ export const EffectAlert = ():JSX.Element => {
                 return <div className='list'>
                     {context.activeEffect.map((effect:string):JSX.Element => {
                         return(
-                            <div className='container-effect'>
-                                <h3 key={randomKey()}>{effect}</h3>
+                            <div className='container-effect' key={randomKey()}>
+                                <h3>{effect}</h3>
                             </div>
                             )
                         })
