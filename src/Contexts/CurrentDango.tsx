@@ -69,7 +69,7 @@ export const CurrentDangoProvider = (props:any):JSX.Element => {
     }
 
     const activateEffects = ():void => {
-        if(currentDango.length === 3 && activeEffect.length === 0){
+        if(currentDango.length === 3 && activeEffect.length === 0 && !dangoHasBeenMade){
             const temp:string[] = [];
             for(const activate of currentDango){
                 if(chance(activate.activationChance)){

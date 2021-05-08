@@ -1,5 +1,5 @@
 import React,{useContext, useState} from 'react';
-import {CurrentDangoContext} from '../Contexts/CurrentDango';
+import {CurrentDangoContext, defaultContext} from '../Contexts/CurrentDango';
 import '../styles/Dango.scss';
 
 interface DangoProps{
@@ -21,7 +21,7 @@ interface DangoState{
 
 
 export const Dango = (props: DangoProps):JSX.Element => {
-    const context = useContext(CurrentDangoContext)
+    const context = useContext<defaultContext>(CurrentDangoContext)
     const [isActive, setIsActive] = useState<DangoState['isActive']>(context.isLocatedInDango(props.dango.id))
 
     const updateStylingIfActive = ():string => {
@@ -31,12 +31,14 @@ export const Dango = (props: DangoProps):JSX.Element => {
     }
 
     const addOrRemoveFromContext = ():void => {
-        if(isActive){
-            context.removeDango(props.dango.id);
-            setIsActive(false)
-        }else{
-            context.addDango(props.dango);
-            setIsActive(true);
+        if(!context.dangoHasBeenMade){
+            if(isActive){
+                context.removeDango(props.dango.id);
+                setIsActive(false)
+            }else{
+                context.addDango(props.dango);
+                setIsActive(true);
+            }
         }
     }
 
