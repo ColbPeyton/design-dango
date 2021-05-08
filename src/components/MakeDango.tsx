@@ -11,8 +11,9 @@ export const MakeDango = ():JSX.Element => {
         }
     }
 
+    // add class based when dango is completed and dango effects have not been generated
     const activateButton = ():string => {
-        return context.currentDango.length === 3
+        return context.currentDango.length === 3 && !context.dangoHasBeenMade
         ? 'active'
         : ''
     }
