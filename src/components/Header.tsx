@@ -1,5 +1,5 @@
 import React,{useContext} from 'react';
-import {CurrentDangoContext, defaultDango, defaultContext} from '../Contexts/CurrentDango';
+import {CurrentDangoContext, defaultContext} from '../Contexts/CurrentDango';
 import '../styles/Header.scss';
 
 export const Header  = ():JSX.Element => {
