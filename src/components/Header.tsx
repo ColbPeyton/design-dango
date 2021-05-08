@@ -6,15 +6,10 @@ export const Header  = ():JSX.Element => {
 
     const context = useContext<defaultContext>(CurrentDangoContext);
 
-    const resetDango = ():void => {
-        context.resetDango();
-        context.resetActiveEffect();
-    }
-
     return(
         <div className='container-header'>
             <div className='contatiner-top-btn'>
-                <button className='btn' onClick={()=> resetDango()}>
+                <button className='btn' onClick={()=> context.resetDangoContext()}>
                     <i className="fas fa-redo"></i>
                 </button>
             </div>

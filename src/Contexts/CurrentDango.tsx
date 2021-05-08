@@ -16,10 +16,10 @@ export interface defaultContext{
     addDango: (id:defaultDango)=> void;
     removeDango: (id:number)=> void;
     isLocatedInDango: (id:number)=> boolean;
-    resetDango: () => void;
-    resetActiveEffect: () => void;
+    resetDangoContext: () => void;
     activateEffects: () => void;
     activeEffect: string[];
+    dangoHasBeenMade: boolean;
 }
 
 
@@ -28,10 +28,10 @@ const defaultValue:defaultContext = {
     addDango: (id:defaultDango)=> {},
     removeDango: (id:number)=> {},
     isLocatedInDango: (id:number) => false,
-    resetDango: () => {},
-    resetActiveEffect: () => {},
+    resetDangoContext: () => {},
     activateEffects: () => {},
-    activeEffect: []
+    activeEffect: [], 
+    dangoHasBeenMade: false
  }
 
 export const CurrentDangoContext = createContext(defaultValue);
@@ -40,11 +40,13 @@ export const CurrentDangoContext = createContext(defaultValue);
 interface CurrentDangoState{
     currentDango: defaultDango[];
     activeEffect: string[];
+    dangoHasBeenMade: boolean;
 }
 
 export const CurrentDangoProvider = (props:any):JSX.Element => {
-    const [currentDango, setCurrentDango] = useState<CurrentDangoState['currentDango']>(defaultValue.currentDango)
-    const [activeEffect, setActiveEffect] = useState<CurrentDangoState['activeEffect']>(defaultValue.activeEffect)
+    const [currentDango, setCurrentDango] = useState<CurrentDangoState['currentDango']>(defaultValue.currentDango);
+    const [activeEffect, setActiveEffect] = useState<CurrentDangoState['activeEffect']>(defaultValue.activeEffect);
+    const [dangoHasBeenMade, setDangoHasBeenMade] = useState<CurrentDangoState['dangoHasBeenMade']>(defaultValue.dangoHasBeenMade);
 
     const addDango = (dango: defaultDango):void => {
         if(!isLocatedInDango(dango.id) && currentDango.length < 3){
@@ -60,12 +62,10 @@ export const CurrentDangoProvider = (props:any):JSX.Element => {
     const isLocatedInDango =(id: number): boolean => {
         return currentDango.some(curr => curr.id === id);
     }
-
-    const resetDango = ():void => {
+    const resetDangoContext = ():void => {
         setCurrentDango([]);
-    }
-    const resetActiveEffect = ():void => {
         setActiveEffect([]);
+        setDangoHasBeenMade(false);
     }
 
     const activateEffects = ():void => {
@@ -77,6 +77,7 @@ export const CurrentDangoProvider = (props:any):JSX.Element => {
                 }
             }
             setActiveEffect(temp);
+            setDangoHasBeenMade(true);
         }
     }
 
@@ -86,10 +87,10 @@ export const CurrentDangoProvider = (props:any):JSX.Element => {
         addDango,
         removeDango,
         isLocatedInDango,
-        resetDango,
-        resetActiveEffect, 
+        resetDangoContext,
         activateEffects, 
-        activeEffect
+        activeEffect, 
+        dangoHasBeenMade
     }
 
     return(
