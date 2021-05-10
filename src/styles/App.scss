@@ -20,11 +20,30 @@
             display: flex;
             justify-self: center;
             align-items: center;
+            margin-top: 1rem;
+            .container-dango-stick{
+                width: 85%;
+            }
+            .container-dango-selection{
+                width: 95%;
+            }
         }
     }
 }
 
 
-@media screen and (min-width: 1025px){
+@media screen and (min-width: 1201px){
+    .container-app{
+        .container-dango-selection-stick{
+            .container-large-layout{
+                .container-dango-stick{
+                    width: 75%;
+                }
+                .container-dango-selection{
+                    width: 85%;
+                }
+            }
+        }
+    }
 
 }

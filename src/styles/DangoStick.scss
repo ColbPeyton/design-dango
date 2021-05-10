@@ -48,6 +48,7 @@
 
 @media screen and (min-width: 481px){
     .container-dango-stick{
+        width: 85%;
         .stick{
             img{
                 max-width: 175px;
@@ -58,6 +59,7 @@
 }
 @media screen and (min-width: 769px){
     .container-dango-stick{
+        width: 80%;
         .stick{
             img{
                 max-width: 250px;
@@ -67,15 +69,26 @@
     }
 }
 @media screen and (min-width: 1025px){
-   
+    .container-dango-stick{ 
+        margin: 0;
+        width: 90%;  
+        .container-stick-section{
+            width: 95%;
+            .stick{
+                width: 45%;
+                img{
+                    max-width: 150px;
+                    max-height: 150px;
+                }
+            }
+            .effect{
+                width: 55%;
+            }
+        }
+    }    
 }
 @media screen and (min-width: 1201px){
     .container-dango-stick{
-        .stick{
-            img{
-                max-width: 275px;
-                max-height: 275px;
-            }
-        } 
+        justify-content: flex-end;
     }
 }
