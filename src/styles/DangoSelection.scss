@@ -98,10 +98,37 @@
     }
 }
 @media screen and (min-width: 769px){
-    
+    .container-dango-selection{
+        height: 550px;
+        .container-dangos{
+            width:100%;
+            height: 425px;
+        }
+    }
 }
 @media screen and (min-width: 1025px){
-   
+    .container-dango-selection{
+        height: 550px;
+        width: 90%;
+        .container-catagories{
+            width: 100%;
+            height: 10%;
+            min-height: 75px;
+            align-items: flex-end;
+            flex-direction: row;
+            .top{
+                width: 25%;
+            }
+
+            .catagory-btn{
+                font-size: 1rem;
+            }
+        }
+        .container-dangos{
+            width:100%;
+            height: 425px;
+        }
+    }
 }
 @media screen and (min-width: 1201px){
     
