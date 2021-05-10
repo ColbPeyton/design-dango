@@ -25,7 +25,7 @@
 
             &:first-child{
                 margin-bottom: 5px;
-                font-size: 1.25rem;
+                font-size: 1.15rem;
             }
         }
     }
@@ -47,7 +47,7 @@
     }
 }
 
-@media screen and (min-height:850px){
+@media screen and (min-height:1200px){
     .container-footer{
         position: absolute;
         bottom: 0;
