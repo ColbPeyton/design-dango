@@ -59,6 +59,17 @@
 }
 
 
+@media screen and (min-width: 599px){
+    .container-header{
+        height: 15vh;
+        .btn{
+            i{
+                font-size: 2.5rem;
+            }
+        }
+
+    }
+}
 @media screen and (min-width: 769px){
     .container-header{
         .btn{
