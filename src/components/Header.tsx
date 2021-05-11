@@ -1,5 +1,6 @@
 import React,{useContext} from 'react';
 import {CurrentDangoContext, defaultContext} from '../Contexts/CurrentDango';
+import logo from '../assets/other/headerLogo.png';
 import '../styles/Header.scss';
 
 export const Header  = ():JSX.Element => {
@@ -14,7 +15,7 @@ export const Header  = ():JSX.Element => {
                 </button>
             </div>
             <div className='container-logo'>
-                <h2>Dango Designer</h2>
+                <img src={logo} alt='go go dango' />
             </div>
             <div className='contatiner-top-btn'>
                 <button className='btn'>

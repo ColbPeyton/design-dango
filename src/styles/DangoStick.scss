@@ -59,7 +59,7 @@
 }
 @media screen and (min-width: 769px){
     .container-dango-stick{
-        width: 80%;
+        width: 75%;
         .stick{
             img{
                 max-width: 250px;
@@ -70,29 +70,14 @@
 }
 @media screen and (min-width: 1025px){
     .container-dango-stick{ 
-        margin: 0;
-        width: 90%; 
+        margin-top: 1rem;
         .container-stick-section{
-            width: 95%;
             .stick{
-                width: 45%;
-                height: 50%;
-
                 img{
                     max-width: 175px;
                     max-height: 175px;
                 }
             }
-            .effect{
-                width: 55%;
-                height: 50%;
-
-            }
         }
     }    
-}
-@media screen and (min-width: 1201px){
-    .container-dango-stick{
-        justify-content: flex-end;
-    }
 }

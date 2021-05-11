@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: $background-navy;
+    background-color: $yellow;
     position: sticky;
     z-index: 20;
     top: 0;
@@ -27,6 +27,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        img{
+            max-height: 90%;
+        }
     }
     .btn{
         color: #fff;
