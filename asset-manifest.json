@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/design-dango/static/css/main.a889444a.chunk.css",
+    "main.css": "/design-dango/static/css/main.55a52066.chunk.css",
     "main.js": "/design-dango/static/js/main.3fd01014.chunk.js",
     "main.js.map": "/design-dango/static/js/main.3fd01014.chunk.js.map",
     "runtime-main.js": "/design-dango/static/js/runtime-main.0e674307.js",
@@ -8,14 +8,14 @@
     "static/js/2.a7efdbbc.chunk.js": "/design-dango/static/js/2.a7efdbbc.chunk.js",
     "static/js/2.a7efdbbc.chunk.js.map": "/design-dango/static/js/2.a7efdbbc.chunk.js.map",
     "index.html": "/design-dango/index.html",
-    "static/css/main.a889444a.chunk.css.map": "/design-dango/static/css/main.a889444a.chunk.css.map",
+    "static/css/main.55a52066.chunk.css.map": "/design-dango/static/css/main.55a52066.chunk.css.map",
     "static/js/2.a7efdbbc.chunk.js.LICENSE.txt": "/design-dango/static/js/2.a7efdbbc.chunk.js.LICENSE.txt",
     "static/media/headerLogo.3ad4b425.png": "/design-dango/static/media/headerLogo.3ad4b425.png"
   },
   "entrypoints": [
     "static/js/runtime-main.0e674307.js",
     "static/js/2.a7efdbbc.chunk.js",
-    "static/css/main.a889444a.chunk.css",
+    "static/css/main.55a52066.chunk.css",
     "static/js/main.3fd01014.chunk.js"
   ]
 }
