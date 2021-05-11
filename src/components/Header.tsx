@@ -18,7 +18,7 @@ export const Header  = ():JSX.Element => {
                 <img src={logo} alt='go go dango' />
             </div>
             <div className='contatiner-top-btn'>
-                <button className='btn'>
+                <button className='btn' onClick= {() => {window.scrollTo({top: 0, behavior: 'smooth'})}}>
                     <i className="fas fa-arrow-up"></i>
                 </button>
             </div>
