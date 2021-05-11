@@ -98,7 +98,6 @@
             width:100%;
             height: 375px;
             grid-template-columns: repeat(3, 1fr);
-            grid-auto-rows: 1fr
         }
     }
 }
@@ -113,6 +112,7 @@
 }
 @media screen and (min-width: 1025px){
     .container-dango-selection{
+        height: 500px;
         width: 100%;
         display: flex;
         justify-content: flex-start;
