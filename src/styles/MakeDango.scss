@@ -16,13 +16,26 @@
         color: #fff;
         font-size: 1.25rem;
         cursor: not-allowed;
-
+        transition: all 250ms ease-in-out;
         &.active{
             background-color: $background-navy;
             cursor: pointer;
+            &:hover{
+                color: $background-navy;
+            }
         }
         
     }
 
 
+}
+
+@media screen and (min-width: 599px){
+    .container-make{
+        margin: 0.75rem 0;
+        button{
+            padding: 15px 25px;
+            font-size: 1.5rem;
+        }
+    }
 }

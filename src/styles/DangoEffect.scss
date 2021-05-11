@@ -4,7 +4,7 @@
 .container-dango-effect{
     width: 100%;
     height: 100%;
-    background-color: $background-effect;
+    background-color: $background-navy-light;
     min-height: 100px;
     display: flex;
     justify-content: space-evenly;
@@ -34,5 +34,17 @@
         justify-content: flex-start;
         align-items: flex-start;
         color: $yellow;
+    }
+}
+
+
+@media screen and (min-width: 599px){
+    .container-dango-effect{
+        font-size: 1.15rem;
+        .top{
+            font-size: 1rem;
+   
+        }
+
     }
 }
