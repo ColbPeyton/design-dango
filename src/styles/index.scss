@@ -25,10 +25,12 @@ button{
   &:focus {outline:0;}
 }
 
-
 @media screen and (min-width: 2000px){
-  body{
-    display: flex;
-    justify-content: center;
+  #root{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
   }
+
 }

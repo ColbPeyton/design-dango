@@ -15,16 +15,17 @@
         align-items: center;
         flex-direction: column;
         &.large{
-            height: 88vh;
+            height: 100%;
             .container-large-layout{
                 width: 100%;
                 height: 100%;
                 display: flex;
                 justify-self: center;
                 align-items: center;
-                margin-top: 2rem;
+                margin-top: 3rem;
                 .container-dango-stick{
                     width: 85%;
+                    height: 100%;
                 }
                 .container-dango-selection{
                     width: 95%;
@@ -40,6 +41,7 @@
     .container-app{
         .container-dango-selection-stick{
             .container-large-layout{
+                max-height: 660px;
                 .container-dango-stick{
                     width: 75%;
                 }
