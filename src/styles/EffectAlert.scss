@@ -5,7 +5,7 @@
     top: 50%;
     left: 50%;
     width: 300px;
-    height: 200px;
+    height: 225px;
     transform: translate(-50%, -50%);
     z-index: 15;
     background-color: $background-dango;
@@ -59,7 +59,7 @@
             align-items: center;
             width: 50%;
             height: 50%;
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
             background-color: $background-dango-selection;
             color: $border-dango-selection;
@@ -75,10 +75,17 @@
     }
 }
 
+
 @media screen and (min-width: 599px){
     .container-effect-alert{
+        top: 50%;
         width: 325px;
         height: 225px;
     }
- 
+}
+
+@media screen and (min-width: 568px) and (max-height: 449px){
+    .container-effect-alert{
+        top: 60%;
+    }
 }
