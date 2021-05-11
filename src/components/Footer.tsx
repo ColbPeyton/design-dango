@@ -9,7 +9,7 @@ export const Footer = ():JSX.Element => {
                 <p>I like Monster Hunter.</p> <p>Please don't sue me.</p>
             </div>
             <div className='bot'>
-                <p>Developed by <a href={link}>ColbPeyton</a></p>
+                <p>Developed by <a href={link} target="_blank" rel="noreferrer">ColbPeyton</a></p>
             </div>
         </div>
     )
