@@ -1,3 +1,3 @@
 export const randomKey = ():number => {
-    return Math.floor(Math.random() * 100000);
+    return Math.floor(Math.random() * 1000000);
 }

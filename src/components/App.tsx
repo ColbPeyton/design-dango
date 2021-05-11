@@ -47,7 +47,7 @@ export const App = ():JSX.Element => {
 
   const renderLargeLayout = ():JSX.Element => {
     return(
-      <div className='container-dango-selection-stick'>
+      <div className='container-dango-selection-stick large'>
         <div className='container-large-layout'>
           <div className='container-dango-stick'>
             <DangoStick />

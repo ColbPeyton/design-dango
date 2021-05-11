@@ -92,17 +92,17 @@
         height: 525px;
         .container-dangos{
             width:100%;
-            height: 400px;
+            height: 375px;
             grid-template-columns: repeat(3, 1fr);
         }
     }
 }
 @media screen and (min-width: 769px){
     .container-dango-selection{
-        height: 550px;
+        height: 525px;
         .container-dangos{
             width:100%;
-            height: 425px;
+            height: 375px;
         }
     }
 }
